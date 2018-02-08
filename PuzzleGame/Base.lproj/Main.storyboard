@@ -1,24 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MarkerFeltWide.ttf">
+            <string>MarkerFelt-Wide</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjz-jf-gZh">
+                                <rect key="frame" x="122" y="172" width="131" height="22.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="¡You won!">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="MarkerFelt-Wide"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3Y-Qo-cJU">
+                                <rect key="frame" x="56" y="117.5" width="262.5" height="32"/>
+                                <color key="backgroundColor" red="0.49301250564213733" green="0.49576710108446492" blue="0.50408302829955431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="15"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oZZ-VD-h3E"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAy-NZ-ixb">
+                                <rect key="frame" x="56.5" y="35.5" width="262.5" height="262.5"/>
+                                <color key="backgroundColor" red="0.57120746580000004" green="0.76569376659999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uAy-NZ-ixb" secondAttribute="height" multiplier="1:1" id="BCH-kp-4mx"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6pz-0A-cRx">
+                                <rect key="frame" x="222" y="304" width="97" height="31.5"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Other pls">
+                                            <attributes>
+                                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <font key="NSFont" size="15" name="MarkerFelt-Wide"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="btn_restart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uWQ-9e-8Yh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VNw-RY-Mkr">
+                                <rect key="frame" x="56.5" y="304" width="97" height="33"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Change Image">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="16" name="MarkerFelt-Wide"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="movement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ux8-O1-PgM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jiffpom.png" translatesAutoresizingMaskIntoConstraints="NO" id="mEU-Ha-Cm6">
+                                <rect key="frame" x="56" y="392.5" width="262.5" height="262.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fo-To-bGw">
+                                <rect key="frame" x="56" y="369.5" width="131" height="23"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="MarkerFelt-Wide"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FD3-ea-rVQ">
+                                <rect key="frame" x="187.5" y="370" width="131" height="22.5"/>
+                                <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="MarkerFelt-Wide"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84933792549999998" green="0.84933792549999998" blue="0.84933792549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uAy-NZ-ixb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="0Td-Te-3HH"/>
+                            <constraint firstItem="f3Y-Qo-cJU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2h7-3M-h6S"/>
+                            <constraint firstItem="6Fo-To-bGw" firstAttribute="leading" secondItem="mEU-Ha-Cm6" secondAttribute="leading" id="44e-5c-qgO"/>
+                            <constraint firstItem="FD3-ea-rVQ" firstAttribute="trailing" secondItem="mEU-Ha-Cm6" secondAttribute="trailing" id="7XN-IL-vjY"/>
+                            <constraint firstItem="mEU-Ha-Cm6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.57" id="C6z-Lt-u1f"/>
+                            <constraint firstItem="uAy-NZ-ixb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fj5-jV-8s8"/>
+                            <constraint firstItem="f3Y-Qo-cJU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="KKC-3l-ZfU"/>
+                            <constraint firstItem="yjz-jf-gZh" firstAttribute="width" secondItem="f3Y-Qo-cJU" secondAttribute="width" multiplier="0.5" id="KPf-eY-GRD"/>
+                            <constraint firstItem="VNw-RY-Mkr" firstAttribute="leading" secondItem="uAy-NZ-ixb" secondAttribute="leading" id="LJx-x2-gbX"/>
+                            <constraint firstItem="6Fo-To-bGw" firstAttribute="width" secondItem="FD3-ea-rVQ" secondAttribute="width" id="LPe-8A-YYo"/>
+                            <constraint firstItem="uAy-NZ-ixb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="LuY-dS-TCD"/>
+                            <constraint firstItem="mEU-Ha-Cm6" firstAttribute="top" secondItem="6Fo-To-bGw" secondAttribute="bottom" id="RmH-B6-SWC"/>
+                            <constraint firstItem="yjz-jf-gZh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U3g-fi-1J1"/>
+                            <constraint firstItem="FD3-ea-rVQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="X3c-Yk-Ndd"/>
+                            <constraint firstItem="VNw-RY-Mkr" firstAttribute="top" secondItem="uAy-NZ-ixb" secondAttribute="bottom" multiplier="1.02" id="g24-nn-okb"/>
+                            <constraint firstItem="f3Y-Qo-cJU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.4" id="gNg-sw-2cu"/>
+                            <constraint firstItem="6pz-0A-cRx" firstAttribute="trailing" secondItem="uAy-NZ-ixb" secondAttribute="trailing" id="j0c-Il-LRr"/>
+                            <constraint firstItem="VNw-RY-Mkr" firstAttribute="width" secondItem="6pz-0A-cRx" secondAttribute="width" id="jh0-P5-HCM"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6Fo-To-bGw" secondAttribute="trailing" constant="20" symbolic="YES" id="l8c-y7-jLU"/>
+                            <constraint firstItem="mEU-Ha-Cm6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lE4-Sl-BPi"/>
+                            <constraint firstItem="mEU-Ha-Cm6" firstAttribute="top" secondItem="FD3-ea-rVQ" secondAttribute="bottom" id="mnx-PT-29a"/>
+                            <constraint firstItem="mEU-Ha-Cm6" firstAttribute="height" secondItem="uAy-NZ-ixb" secondAttribute="height" id="nUG-fb-cJs"/>
+                            <constraint firstItem="mEU-Ha-Cm6" firstAttribute="width" secondItem="uAy-NZ-ixb" secondAttribute="width" id="nZc-WD-Hqz"/>
+                            <constraint firstItem="yjz-jf-gZh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.55" id="tD2-Kt-AhJ"/>
+                            <constraint firstItem="FD3-ea-rVQ" firstAttribute="width" secondItem="uAy-NZ-ixb" secondAttribute="width" multiplier="0.5" id="wZM-cq-1P6"/>
+                            <constraint firstItem="6pz-0A-cRx" firstAttribute="top" secondItem="uAy-NZ-ixb" secondAttribute="bottom" multiplier="1.02" id="x6w-Aq-ySk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="board" destination="uAy-NZ-ixb" id="s5B-I2-crC"/>
+                        <outlet property="btn_again" destination="f3Y-Qo-cJU" id="OWF-yc-EnK"/>
+                        <outlet property="imageToCrop" destination="mEU-Ha-Cm6" id="TAp-40-kM3"/>
+                        <outlet property="lb_counter" destination="6Fo-To-bGw" id="cMs-zs-vqd"/>
+                        <outlet property="lb_record" destination="FD3-ea-rVQ" id="Ly1-5a-S0v"/>
+                        <outlet property="lb_won" destination="yjz-jf-gZh" id="Ztv-i8-ITm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="jiffpom.png" width="589" height="586"/>
+    </resources>
 </document>

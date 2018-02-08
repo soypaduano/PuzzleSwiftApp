@@ -12,6 +12,7 @@
 		F92AAB02202B19C6001C96D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92AAB00202B19C6001C96D9 /* Main.storyboard */; };
 		F92AAB04202B19C6001C96D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F92AAB03202B19C6001C96D9 /* Assets.xcassets */; };
 		F92AAB07202B19C6001C96D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92AAB05202B19C6001C96D9 /* LaunchScreen.storyboard */; };
+		F9F8982A202C4DAF00F1BC28 /* jiffpom.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F89829202C4DAF00F1BC28 /* jiffpom.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		F92AAB03202B19C6001C96D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F92AAB06202B19C6001C96D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F92AAB08202B19C6001C96D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9F89829202C4DAF00F1BC28 /* jiffpom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jiffpom.png; path = ../../Desktop/jiffpom.png; sourceTree = "<group>"; };
+		F9F8982B202C4DB100F1BC28 /* jiffpom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jiffpom.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +41,7 @@
 		F92AAAF0202B19C6001C96D9 = {
 			isa = PBXGroup;
 			children = (
+				F9F89829202C4DAF00F1BC28 /* jiffpom.png */,
 				F92AAAFB202B19C6001C96D9 /* PuzzleGame */,
 				F92AAAFA202B19C6001C96D9 /* Products */,
 			);
@@ -54,6 +58,7 @@
 		F92AAAFB202B19C6001C96D9 /* PuzzleGame */ = {
 			isa = PBXGroup;
 			children = (
+				F9F8982B202C4DB100F1BC28 /* jiffpom.png */,
 				F92AAAFC202B19C6001C96D9 /* AppDelegate.swift */,
 				F92AAAFE202B19C6001C96D9 /* ViewController.swift */,
 				F92AAB00202B19C6001C96D9 /* Main.storyboard */,
@@ -123,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9F8982A202C4DAF00F1BC28 /* jiffpom.png in Resources */,
 				F92AAB07202B19C6001C96D9 /* LaunchScreen.storyboard in Resources */,
 				F92AAB04202B19C6001C96D9 /* Assets.xcassets in Resources */,
 				F92AAB02202B19C6001C96D9 /* Main.storyboard in Resources */,

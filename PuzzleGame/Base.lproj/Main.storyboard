@@ -84,11 +84,8 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
-                                <connections>
-                                    <action selector="movement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ux8-O1-PgM"/>
-                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jiffpom.png" translatesAutoresizingMaskIntoConstraints="NO" id="mEU-Ha-Cm6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dani.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mEU-Ha-Cm6">
                                 <rect key="frame" x="56" y="392.5" width="262.5" height="262.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fo-To-bGw">
@@ -117,6 +114,14 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01t-Fz-Ut0">
+                                <rect key="frame" x="2" y="350" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ganar"/>
+                                <connections>
+                                    <action selector="btn_win:" destination="BYZ-38-t0r" eventType="touchUpInside" id="seW-Ry-ilB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.84933792549999998" green="0.84933792549999998" blue="0.84933792549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -152,6 +157,8 @@
                     <connections>
                         <outlet property="board" destination="uAy-NZ-ixb" id="s5B-I2-crC"/>
                         <outlet property="btn_again" destination="f3Y-Qo-cJU" id="OWF-yc-EnK"/>
+                        <outlet property="btn_changeImage" destination="VNw-RY-Mkr" id="l33-hI-rd1"/>
+                        <outlet property="btn_other" destination="6pz-0A-cRx" id="3Wf-nP-Fk9"/>
                         <outlet property="imageToCrop" destination="mEU-Ha-Cm6" id="TAp-40-kM3"/>
                         <outlet property="lb_counter" destination="6Fo-To-bGw" id="cMs-zs-vqd"/>
                         <outlet property="lb_record" destination="FD3-ea-rVQ" id="Ly1-5a-S0v"/>
@@ -164,6 +171,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="jiffpom.png" width="589" height="586"/>
+        <image name="dani.jpg" width="966" height="1288"/>
     </resources>
 </document>

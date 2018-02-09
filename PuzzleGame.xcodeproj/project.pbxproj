@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F90CCA83202DCCE500AE4465 /* dani.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F90CCA82202DCCE500AE4465 /* dani.jpg */; };
 		F92AAAFD202B19C6001C96D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92AAAFC202B19C6001C96D9 /* AppDelegate.swift */; };
 		F92AAAFF202B19C6001C96D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92AAAFE202B19C6001C96D9 /* ViewController.swift */; };
 		F92AAB02202B19C6001C96D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92AAB00202B19C6001C96D9 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F90CCA82202DCCE500AE4465 /* dani.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = dani.jpg; path = ../../Desktop/dani.jpg; sourceTree = "<group>"; };
 		F92AAAF9202B19C6001C96D9 /* PuzzleGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuzzleGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92AAAFC202B19C6001C96D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F92AAAFE202B19C6001C96D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 		F92AAAF0202B19C6001C96D9 = {
 			isa = PBXGroup;
 			children = (
+				F90CCA82202DCCE500AE4465 /* dani.jpg */,
 				F9F89829202C4DAF00F1BC28 /* jiffpom.png */,
 				F92AAAFB202B19C6001C96D9 /* PuzzleGame */,
 				F92AAAFA202B19C6001C96D9 /* Products */,
@@ -128,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F90CCA83202DCCE500AE4465 /* dani.jpg in Resources */,
 				F9F8982A202C4DAF00F1BC28 /* jiffpom.png in Resources */,
 				F92AAB07202B19C6001C96D9 /* LaunchScreen.storyboard in Resources */,
 				F92AAB04202B19C6001C96D9 /* Assets.xcassets in Resources */,

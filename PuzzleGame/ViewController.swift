@@ -50,8 +50,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var lb_record: UILabel!
     @IBOutlet weak var lb_won: UILabel!
     @IBOutlet weak var btn_again: UIButton!
+    @IBOutlet weak var btn_changeImage: UIButton!
+    @IBOutlet weak var btn_other: UIButton!
     
     
+    var firstBoardPosition : CGPoint = CGPoint(x: 0, y: 0)
     private var tileWidth : CGFloat = 0.0
     private var tileCenterX : CGFloat = 0.0
     private var tileCenterY : CGFloat = 0.0
@@ -73,10 +76,11 @@ class ViewController: UIViewController {
         GetRecord()
         btn_again.isHidden = true
         lb_won.isHidden = true
+        
     }
     
     private func SetRecord(record: Int){
-        if(record > UserDefaults.standard.integer(forKey: "Record")){
+        if(record < UserDefaults.standard.integer(forKey: "Record")){
             UserDefaults.standard.set(record, forKey: "Record")
             lb_record.text = "High: " + String(record)
         }
@@ -97,6 +101,7 @@ class ViewController: UIViewController {
         cropImages = (imageToCrop.image?.splitedInSixteenParts)!
         SetBoard()
         randomTiles()
+        firstBoardPosition = board.center
     }
 
     func checkPositions() -> Bool{
@@ -114,8 +119,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playAgain(_ sender: Any) {
+        tileNumber = 0
+        board.subviews.forEach({ $0.removeFromSuperview() })
         backToPosition()
-        cleanArrays()
         SetBoard()
         randomTiles()
     }
@@ -124,8 +130,12 @@ class ViewController: UIViewController {
         AddOne()
         randomTiles()
     }
-
+    
+    
+    
     private func SetBoard(){
+        print("^^^^^^^^")
+        print(cropImages.count)
         tileArray = []
         tileCenterArray = []
         
@@ -214,16 +224,23 @@ class ViewController: UIViewController {
             }
         }
     }
+    @IBAction func btn_win(_ sender: Any) {
+        WinMovement()
+    }
     private func backToPosition(){
         lb_won.isHidden = true
         btn_again.isHidden = true
+        btn_other.isHidden = false
+        btn_changeImage.isHidden = false
         UIView.beginAnimations(nil, context: nil)
         UIView.setAnimationDuration(1)
-        imageToCrop.center = board.center
+        board.center = firstBoardPosition
         UIView.commitAnimations()
     }
     
     private func WinMovement(){
+        btn_other.isHidden = true
+        btn_changeImage.isHidden = true
         lb_won.isHidden = false
         btn_again.isHidden = false
         UIView.beginAnimations(nil, context: nil)
@@ -232,14 +249,7 @@ class ViewController: UIViewController {
         UIView.commitAnimations()
     }
     
-    private func cleanArrays(){
-        tileArray.removeAllObjects()
-        tileCenterArray.removeAllObjects()
-    }
-    
-    @IBAction func movement(_ sender: Any) {
-        
-    }
+
     
 }
 

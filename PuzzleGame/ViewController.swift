@@ -66,7 +66,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     var touchesCount = 0
     
     var picker : UIImagePickerController = UIImagePickerController()
-    //var newPic : Bool?
+    var newPic = false
     
     //Variables for the crop image
     var cropImages: [UIImage] = []
@@ -79,7 +79,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         GetRecord()
         btn_again.isHidden = true
         lb_won.isHidden = true
-        
     }
     
     private func SetRecord(record: Int){
@@ -101,9 +100,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        cropImages = (imageToCrop.image?.splitedInSixteenParts)!
-        SetBoard()
-        randomTiles()
+        if(!newPic){
+            cropImages = (imageToCrop.image?.splitedInSixteenParts)!
+            SetBoard()
+            randomTiles()
+            newPic = true
+        }
         firstBoardPosition = board.center
     }
 
@@ -130,18 +132,14 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     @IBAction func btn_restart(_ sender: Any) {
-        AddOne()
         randomTiles()
+        touchesCount = 0
+        lb_counter.text = "Touches: " + String(touchesCount)
     }
     
-    
-    
     private func SetBoard(){
-        print("^^^^^^^^")
-        print(cropImages.count)
         tileArray = []
         tileCenterArray = []
-        
         let boardWidth = self.board.frame.width // ancho del tablero
         self.tileWidth = boardWidth / 4   // ancho de cada cuadro para que puedan entrar 4 cuadros por cada fila
         self.tileCenterX = self.tileWidth / 2
@@ -227,9 +225,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             }
         }
     }
-    @IBAction func btn_win(_ sender: Any) {
-
-    }
+    
     private func backToPosition(){
         lb_won.isHidden = true
         btn_again.isHidden = true
@@ -254,15 +250,21 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
 
     @IBAction func changeImageBtn(_ sender: Any) {
-        //picker.delegate = self
-        //picker.sourceType = .photoLibrary
-        //present(picker, animated: true, completion: nil)
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        present(picker, animated: true, completion: nil)
     }
     
-    /*func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         picker.dismiss(animated: true, completion: nil)
+        tileNumber = 0
+        touchesCount = 0
         imageToCrop.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-    }*/
+        board.subviews.forEach({ $0.removeFromSuperview() })
+        cropImages = (imageToCrop.image?.splitedInSixteenParts)!
+        SetBoard()
+        randomTiles()
+    }
     
 }
 

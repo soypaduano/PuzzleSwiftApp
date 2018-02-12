@@ -59,7 +59,7 @@
                                 <rect key="frame" x="222" y="304" width="97" height="31.5"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Other pls">
+                                        <fragment content="Random">
                                             <attributes>
                                                 <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <font key="NSFont" size="15" name="MarkerFelt-Wide"/>
@@ -117,14 +117,6 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01t-Fz-Ut0">
-                                <rect key="frame" x="2" y="350" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Ganar"/>
-                                <connections>
-                                    <action selector="btn_win:" destination="BYZ-38-t0r" eventType="touchUpInside" id="seW-Ry-ilB"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.84933792549999998" green="0.84933792549999998" blue="0.84933792549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

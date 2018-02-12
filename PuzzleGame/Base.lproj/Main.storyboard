@@ -84,8 +84,11 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="changeImageBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cht-fW-N04"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dani.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mEU-Ha-Cm6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jiffpom" translatesAutoresizingMaskIntoConstraints="NO" id="mEU-Ha-Cm6">
                                 <rect key="frame" x="56" y="392.5" width="262.5" height="262.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fo-To-bGw">
@@ -171,6 +174,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dani.jpg" width="966" height="1288"/>
+        <image name="jiffpom" width="589" height="586"/>
     </resources>
 </document>

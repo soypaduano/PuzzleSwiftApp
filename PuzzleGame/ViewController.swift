@@ -43,7 +43,7 @@ extension UIImage {
     }
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet weak var bigImage: UIImageView!
     @IBOutlet weak var board: UIView!
     @IBOutlet weak var lb_counter: UILabel!
@@ -64,6 +64,9 @@ class ViewController: UIViewController {
     var tileEmptyCenter : CGPoint = CGPoint(x: 0.0, y: 0.0)
     var counter = 0
     var touchesCount = 0
+    
+    var picker : UIImagePickerController = UIImagePickerController()
+    //var newPic : Bool?
     
     //Variables for the crop image
     var cropImages: [UIImage] = []
@@ -225,7 +228,7 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func btn_win(_ sender: Any) {
-        WinMovement()
+
     }
     private func backToPosition(){
         lb_won.isHidden = true
@@ -250,6 +253,16 @@ class ViewController: UIViewController {
     }
     
 
+    @IBAction func changeImageBtn(_ sender: Any) {
+        //picker.delegate = self
+        //picker.sourceType = .photoLibrary
+        //present(picker, animated: true, completion: nil)
+    }
+    
+    /*func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        imageToCrop.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+    }*/
     
 }
 
